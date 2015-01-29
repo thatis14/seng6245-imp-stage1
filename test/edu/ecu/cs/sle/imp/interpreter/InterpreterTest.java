@@ -21,4 +21,41 @@ public class InterpreterTest {
 		IntegerValue iv = interpreter.interpret("1*2");
 		assertEquals("1*2", 2, iv.getIntValue().intValue());
 	}	
+
+@Test
+public void testDiv() {
+	IntegerValue iv = interpreter.interpret("6/3");
+	assertEquals("6/3", 2, iv.getIntValue().intValue());
+}	
+
+
+@Test
+public void testPlus() {
+	IntegerValue iv = interpreter.interpret("1+2");
+	assertEquals("1+2", 3, iv.getIntValue().intValue());
+}	
+
+
+
+@Test
+public void testMinus() {
+	IntegerValue iv = interpreter.interpret("6-4");
+	assertEquals("6-4", 2, iv.getIntValue().intValue());
+}	
+
+
+
+@Test
+public void testLiteral() {
+	IntegerValue iv = interpreter.interpret("6");
+	assertEquals("6", 6, iv.getIntValue().intValue());
+	
 }
+
+
+@Test
+public void unaryminus() {
+	IntegerValue iv = interpreter.interpret("1*-1");
+	assertEquals("1*-1", -1, iv.getIntValue().intValue());
+}}	
+
