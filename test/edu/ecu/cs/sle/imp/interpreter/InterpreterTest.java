@@ -44,15 +44,6 @@ public void testMinus() {
 }	
 
 
-
-@Test
-public void testLiteral() {
-	IntegerValue iv = interpreter.interpret("6");
-	assertEquals("6", 6, iv.getIntValue().intValue());
-	
-}
-
-
 @Test
 public void unaryminus() {
 	IntegerValue iv = interpreter.interpret("1*-1");
